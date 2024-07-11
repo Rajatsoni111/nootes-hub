@@ -122,5 +122,13 @@ function setCount(add) {
         console.log('timer sarted', count)
     }, 200);
 }
+let click3 = true
+function changecolor(params) {
+    document.body.classList.toggle("back")
+
+    let icon = document.querySelector('i')
+    icon.style.color= "blue"
+
+}
 
 

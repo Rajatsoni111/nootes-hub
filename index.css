@@ -1,12 +1,33 @@
 body{
-    background: linear-gradient(to right,rgb(130, 0, 142),black);
+    background: var(--primary-color);
    
 }
+:root{
+    --primary-color: linear-gradient(to right,rgb(130, 0, 142),black);
+    --secondary-color: white;
+}
+.back{
+    --primary-color: linear-gradient(to right,rgb(0, 99, 35),black);
+    --secondary-color: rgb(250, 248, 199);
+}
 .navbar{
-    color: white;
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+}
+.theam{
+    float: right;
+    display: flex;
+    /* position: absolute; */
+}
+.theam i:hover{
+    color: blue;
+}
+.theam h5{
+    margin-right: 20px;
 }
 .navbar a{
-    color: white;
+    color: var(--secondary-color);
 }
 #boxes{
     align-items: center;
@@ -15,7 +36,7 @@ body{
 }
 .my-3{
     text-align: center;
-    color: white;
+    color: var(--secondary-color);
 }
 .my-3 hr{
     border-color: #9FC088 ;
@@ -32,12 +53,12 @@ body{
     box-shadow: 0px 15px 30px #ffffff;
 }
 .form-control{
-    color: white;
+    color: var(--secondary-color);
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
 }
 .my-4{
-    color: white;
+    color: var(--secondary-color);
     text-align: center;
 }
 .my-5{
@@ -49,7 +70,7 @@ body{
 }
 .noteCard{
     border-radius: 10px;
-    color: white;
+    color: var(--secondary-color);
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     text-align: center;
