@@ -1,20 +1,44 @@
-nav{
-    background-color: #9FC088;
+body{
+    background: linear-gradient(to right,rgb(130, 0, 142),black);
+   
+}
+.navbar{
+    color: white;
+}
+.navbar a{
+    color: white;
 }
 #boxes{
+    align-items: center;
     display: flex;
+    flex-direction: column;
 }
 .my-3{
     text-align: center;
+    color: white;
 }
 .my-3 hr{
-    border-color: #9FC088;
+    border-color: #9FC088 ;
     border-style: dashed ;
 }
 #my-3-1{
+    border-radius: 20px;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     text-align: start;
-    width: 70%;
+    width: 50%;
     margin: 50px;
+    box-shadow: 0px 15px 30px #ffffff;
+}
+.form-control{
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+.my-4{
+    color: white;
+    text-align: center;
 }
 .my-5{
     width: 20%;
@@ -26,14 +50,42 @@ nav{
 .noteCard{
     border-radius: 10px;
     color: white;
-    background: #9FC088;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     text-align: center;
 }
 .noteCard:hover{
     transition: 0.5s;
-    box-shadow: 0px 5px 40px black;
+    box-shadow: 0px 10px 30px rgb(255, 255, 255);
 }
 .noteCard hr{
     border-color: white ;
     border-style: dotted;
+}
+
+@media (max-width: 700px) {
+ 
+    .my-3 h1{
+        font-size: 20px;
+    }
+    .my-3 hr{
+        border: none ;
+    }
+    #my-3-1{
+        border-radius: 20px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        text-align: start;
+        width: 70%;
+        margin: 20px;
+        box-shadow: 0px 15px 30px #ffffff;
+    }
+    .my-5{
+        width: 60%;
+        text-align: center;
+    }
+    #notes{
+        justify-content: center;
+    }
 }
