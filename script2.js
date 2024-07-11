@@ -62,7 +62,7 @@ function showNotes() {
                         <h4 class="card-title" id="itle"> ${element.Title}</h4>
                         <hr>
                         <p class="card-text"> ${element.Text}</p>
-                        <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary ">Delete Note</button>
+                        <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary notebtn">Delete</button>
                     </div>
                 </div>`;
     });
