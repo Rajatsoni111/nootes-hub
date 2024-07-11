@@ -57,7 +57,7 @@ function showNotes() {
     let html = "";
     notesObj.forEach(function (element, index) {
         html += `
-       <div class="noteCard my-2 mx-2 " style="width: 18rem;">
+       <div class="noteCard my-2 mx-2 " ">
                     <div class="card-body">
                         <h4 class="card-title" id="itle"> ${element.Title}</h4>
                         <hr>
@@ -123,12 +123,13 @@ function setCount(add) {
     }, 200);
 }
 let click3 = true
+let icon = document.querySelector('i')
 function changecolor(params) {
     document.body.classList.toggle("back")
 
-    let icon = document.querySelector('i')
-    icon.style.color= "blue"
-
+if (icon === click3) {
+    icon.style.color='blue'
+}
 }
 
 
