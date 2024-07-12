@@ -57,8 +57,9 @@ function showNotes() {
     let html = "";
     notesObj.forEach(function (element, index) {
         html += `
-       <div class="noteCard my-2 mx-2 " ">
-                    <div class="card-body">
+       <div class="noteCard my-2 mx-2 " >
+                    <div class="card-body" >
+                    <i class="fa-solid fa-xmark" onclick="hide()"></i>
                         <h4 class="card-title" id="itle"> ${element.Title}</h4>
                         <hr>
                         <p class="card-text"> ${element.Text}</p>
@@ -94,6 +95,23 @@ function fun1() {
 
 }
 
+// function for popscreeen
+let popScreen = document.querySelector('.card-body')
+popScreen.addEventListener('click',popup())
+function popup() {
+    console.log("clicked")
+    popScreen.id = "active"
+    
+    // popScreen.style.width = '19rem'
+    // popScreen.style.height = '50vh'
+    // popScreen.style.position = 'absolute'
+}
+function hide(params) {
+    console.log("clicked2")
+    let popScreen = document.querySelector('.card-body')
+    popScreen.removeAttribute("id")
+
+}
 // function to delete the note on the display
 function deleteNote(index) {
     let notes = localStorage.getItem('notes')
@@ -127,9 +145,7 @@ let icon = document.querySelector('i')
 function changecolor(params) {
     document.body.classList.toggle("back")
 
-if (icon === click3) {
-    icon.style.color='blue'
-}
+
 }
 
 

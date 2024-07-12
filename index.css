@@ -3,12 +3,12 @@ body{
    
 }
 :root{
-    --primary-color: linear-gradient(to right,rgb(130, 0, 142),black);
+    --primary-color: linear-gradient(to top,#7801b0,#4c067a);
     --secondary-color: white;
     --third-color: rgb(0, 99, 35);
 }
 .back{
-    --primary-color: linear-gradient(to right,rgb(0, 99, 35),black);
+    --primary-color: linear-gradient(to bottom,rgb(0, 125, 19),rgb(3, 96, 35),black);
     --secondary-color: rgb(250, 248, 199);
     --third-color: rgb(121, 37, 255);
 }
@@ -53,6 +53,10 @@ nav{
     
     text-align: center;
     color: var(--secondary-color);
+}
+.my-3 h1{
+    margin-top: 80px;
+
 }
 .my-3 hr{
     border-color: #9FC088 ;
@@ -99,6 +103,10 @@ nav{
 .noteCard hr{
     border-color: white ;
     border-style: dotted;
+}
+.card-body{
+    width: 18rem;
+    overflow: hidden;
 }
 
 @media (max-width: 700px) {
@@ -156,12 +164,34 @@ nav{
     }
     .card-body{
         width: 10rem;
-        overflow: hidden;
-
+        height: 30vh;
+    }
+    .card-body p{
+        overflow: scroll;
     }
     .notebtn{
         font-size: 1px;
         height: fit-content;
         width: auto;
+    }
+    .card-body i{
+        display: none;
+    }
+    #active{
+        height: auto;
+        width: 19rem;
+    }
+    #active p{
+        width: 100%;
+        flex-wrap: wrap;
+        overflow: visible;
+        position: relative;
+        top: 0;
+    }
+    #activw button{
+        margin-top: auto;
+    }
+    #active i{
+        display: flex;
     }
 }
