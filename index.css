@@ -8,10 +8,12 @@ body{
     --third-color: rgb(0, 99, 35);
 }
 .back{
+    transition-duration: 1s ;
     --primary-color: linear-gradient(to bottom,rgb(0, 125, 19),rgb(3, 96, 35),black);
     --secondary-color: rgb(250, 248, 199);
     --third-color: rgb(121, 37, 255);
 }
+
 nav{
     z-index: 999;
     top: 0;
@@ -45,9 +47,10 @@ nav{
     color: var(--secondary-color);
 }
 #boxes{
-    align-items: center;
+    /* align-items: center; */
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    justify-content: center;
 }
 .my-3{
     
@@ -82,8 +85,12 @@ nav{
     text-align: center;
 }
 .my-5{
-    /* width: 20%; */
+    top: 0;
+    /* width: 20px; */
     text-align: center;
+}
+.my-5 h2{
+    font-size: 20px;
 }
 #timer{
     font-size: 70px;
@@ -107,6 +114,9 @@ nav{
 .card-body{
     width: 18rem;
     overflow: hidden;
+}
+.card-body i{
+    display: none;
 }
 
 @media (max-width: 700px) {
@@ -154,6 +164,12 @@ nav{
     }
     .my-4{
         top: 0px;
+    }
+    #boxes{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     #notes{
         justify-content: center;

@@ -59,7 +59,7 @@ function showNotes() {
         html += `
        <div class="noteCard my-2 mx-2 " >
                     <div class="card-body" >
-                    <i class="fa-solid fa-xmark" onclick="hide()"></i>
+                    <i class="fa-solid fa-xmark cross" ></i>
                         <h4 class="card-title" id="itle"> ${element.Title}</h4>
                         <hr>
                         <p class="card-text"> ${element.Text}</p>
@@ -96,22 +96,37 @@ function fun1() {
 }
 
 // function for popscreeen
-let popScreen = document.querySelector('.card-body')
-popScreen.addEventListener('click',popup())
-function popup() {
-    console.log("clicked")
-    popScreen.id = "active"
-    
-    // popScreen.style.width = '19rem'
-    // popScreen.style.height = '50vh'
-    // popScreen.style.position = 'absolute'
-}
-function hide(params) {
-    console.log("clicked2")
-    let popScreen = document.querySelector('.card-body')
-    popScreen.removeAttribute("id")
+const popScreen = document.querySelectorAll('.card-body')
+// let screen = popScreen.length
+// for (var i = 1; i < screen; i++) {
+//     popScreen[i].addEventListener('click', popup, false);
+//   }
+ 
+popScreen.forEach(popScreen => {
+    popScreen.addEventListener("click" , popup)
 
+    function popup() {
+        console.log("hello")
+        popScreen.id = "active"
+        popScreen.removeEventListener("click" , popup)
 }
+});
+
+let i = document.querySelectorAll(".cross")
+i.forEach(i => {
+
+    i.addEventListener("click" , hide)
+    function hide() {
+    // let popScreen = document.querySelectorAll('.card-body')
+   let hide = document.getElementById("active")
+    console.log("clicked2")
+    hide.removeAttribute("id")
+   
+}
+
+});
+
+
 // function to delete the note on the display
 function deleteNote(index) {
     let notes = localStorage.getItem('notes')
@@ -140,12 +155,12 @@ function setCount(add) {
         console.log('timer sarted', count)
     }, 200);
 }
-let click3 = true
+
+// funvtion for changing the theme
 let icon = document.querySelector('i')
 function changecolor(params) {
     document.body.classList.toggle("back")
-
-
+    
 }
 
 
